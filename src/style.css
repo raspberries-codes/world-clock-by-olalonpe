@@ -4,6 +4,9 @@ body {
 h1 {
   text-align: center;
 }
+a {
+  color: rgb(138, 43, 226, 3);
+}
 footer {
   text-align: center;
 }
