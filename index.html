@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World clock by Olalonpe</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <h1>Raspsberry World clock</h1>
@@ -19,24 +21,30 @@
       <div class="cityTime">
         <div class="city">
           <h2>Los Angeles</h2>
-          <div class="date">Thursday,July 10th, 2025</div>
+          <div class="date" id="los-Angeles-date"></div>
         </div>
-        <div class="time">2:42:12 <small>pm</small></div>
+        <div class="time" id="los-angeles-time">
+          <small id="amElement"></small>
+        </div>
       </div>
 
       <div class="cityTime">
         <div class="city">
-          <h2>Los Angeles</h2>
-          <div class="date">Thursday,July 10th, 2025</div>
+          <h2>Paris</h2>
+          <div class="date" id="parisDate"></div>
         </div>
-        <div class="time">2:42:12 <small>pm</small></div>
+        <div class="time" id="parisTime">
+          <small id="paris-AmElement"></small>
+        </div>
       </div>
-      <div class="citySweden">
+      <div class="cityNigeria">
         <div class="city">
-          <h2>Sweden</h2>
-          <div class="date">Thursday,July 10th, 2025</div>
+          <h2>Nigeria</h2>
+          <div class="date" id="nigeriaDate"></div>
         </div>
-        <div class="time">2:42:12 <small>pm</small></div>
+        <div class="time" id="nigeriaTime">
+          <small id="nigeria-AmElement"></small>
+        </div>
       </div>
     </div>
     <script src="src/index.js"></script>
