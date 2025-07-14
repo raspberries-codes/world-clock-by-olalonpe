@@ -7,13 +7,9 @@ function losAngelesElements() {
 
   let losAngelesCurrentTime = moment()
     .tz("America/Los_Angeles")
-    .format("hh:mm:ss");
+    .format("hh:mm:ss[<small>] A[</small>]");
   let los_AngelesTime = document.querySelector("#los-angeles-time");
   los_AngelesTime.innerHTML = losAngelesCurrentTime;
-
-  let amElement = moment().tz("America/Los_Angeles").format(A);
-  let los_AngelesAm = document.querySelector("#amElement");
-  los_AngelesAm.innerHTML = amElement;
 }
 function parisElement() {
   let parisCurrentDate = moment()
@@ -22,13 +18,11 @@ function parisElement() {
   let parisDate = document.querySelector("#parisDate");
   parisDate.innerHTML = parisCurrentDate;
 
-  let parisCurrentTime = moment().tz("Europe/paris").format("hh:mm:ss");
+  let parisCurrentTime = moment()
+    .tz("Europe/paris")
+    .format("hh:mm:ss [<small>] A [</small>]");
   let parisTime = document.querySelector("#parisTime");
   parisTime.innerHTML = parisCurrentTime;
-
-  let amElement = moment().tz("Europe/paris").format(A);
-  let parisAm = document.querySelector("#paris-AmElement");
-  parisAm.innerHTML = amElement;
 }
 function nigeriaElement() {
   let nigeriaCurrentDate = moment()
@@ -37,15 +31,34 @@ function nigeriaElement() {
   let nigeriaDate = document.querySelector("#nigeriaDate");
   nigeriaDate.innerHTML = nigeriaCurrentDate;
 
-  let nigeriaCurrentTime = moment().tz("Africa/Lagos").format("hh:mm:ss");
+  let nigeriaCurrentTime = moment()
+    .tz("Africa/Lagos")
+    .format("hh:mm:ss[<small>] A[</small>]");
   let nigeriaTime = document.querySelector("#nigeriaTime");
   nigeriaTime.innerHTML = nigeriaCurrentTime;
-
-  let amElement = moment().tz("Africa/Lagos").format(A);
-  let nigeriaAm = document.querySelector("#nigeria-AmElement");
-  nigeriaAm.innerHTML = amElement;
 }
 
 setInterval(losAngelesElements, 1000);
 setInterval(parisElement, 1000);
 setInterval(nigeriaElement, 1000);
+
+function displayTime(event) {
+  selectedTimeZone = event.target.value;
+  let resultCity = selectedTimeZone.replace("_", " ").split("/")[1];
+  let resultDate = moment().tz(selectedTimeZone).format("dddd MMMM Do, YYYY");
+  let resultTime = moment()
+    .tz(selectedTimeZone)
+    .format("hh:mm:ss [<small>] A [</small>]");
+  let result = document.querySelector("#TimeZoneDisplay");
+  result.innerHTML = ` <div class="cityTime">
+          <div class="city">
+            <h2>${resultCity}</h2>
+            <div class="date">${resultDate}</div>
+          </div>
+          <div class="time">${resultTime}
+          </div>
+        </div>
+`;
+}
+let selection = document.querySelector("#selectElement");
+selection.addEventListener("change", displayTime);
