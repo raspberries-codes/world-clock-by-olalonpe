@@ -1,12 +1,68 @@
 body {
-  background-color: rgb(214, 205, 214);
+  background-color: rgba(91, 84, 95, 0.4);
 }
 h1 {
+  color: rgb(241, 57, 186, 0.9);
+  font-size: 48px;
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container {
+  background-color: rgb(255, 255, 255);
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: rgba(207, 148, 184, 0.5) 0px 8px 24px;
+}
+select {
+  display: block;
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+h2 {
+  margin-bottom: 0;
 }
 a {
-  color: rgb(138, 43, 226, 3);
+  text-decoration: none;
+  color: rgb(241, 57, 186, 0.9);
+}
+div small {
+  vertical-align: middle;
+}
+.cityTime {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-bottom: 1px dotted;
+}
+.citySweden {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.city {
+  padding-bottom: 0%;
+}
+.time {
+  font-size: 58px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.date {
+  opacity: 0.5;
 }
 footer {
+  color: rgb(0, 0, 0, 0.5);
   text-align: center;
+}
+footer strong {
+  color: rgb(0, 0, 0, 0.8);
 }
