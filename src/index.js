@@ -66,7 +66,7 @@ function displayTime(event) {
           </div>
           <div class="time">${resultTime}
           </div>
-        </div>
+        </div><a href="/">Home</a>
 `;
 }
 let selection = document.querySelector("#selectElement");
