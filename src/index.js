@@ -66,7 +66,9 @@ function displayTime(event) {
           </div>
           <div class="time">${resultTime}
           </div>
-        </div><a href="/">Home</a>
+        </div> 
+        <a href="https://raspberryworldclock.netlify.app/"></a>
+      
 `;
 }
 let selection = document.querySelector("#selectElement");
